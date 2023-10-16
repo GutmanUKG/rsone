@@ -79,63 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items[i].classList.remove(classActive);
     }
   }
-  //Слайдеры на главной
-  $(".slider-image").owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: false,
-    mouseDrag: false,
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  });
-  $(".slider-text").owlCarousel({
-    loop: true,
-    margin: 10,
-    nav: false,
-    dots: false,
-    vertical: true,
-    mouseDrag: false,
-    animateIn: "bounceInUp",
-    animateOut: "fadeOut",
-    responsive: {
-      0: {
-        items: 1,
-      },
-      600: {
-        items: 1,
-      },
-      1000: {
-        items: 1,
-      },
-    },
-  });
-  let sliderText = $(".slider-text"),
-    sliderImg = $(".slider-image");
-  sliderText.on("next.owl.carousel", () => {
-    sliderImg.trigger("next.owl.carousel");
-  });
 
-  sliderText.on("prev.owl.carousel", () => {
-    sliderImg.trigger("prev.owl.carousel", [300]);
-  });
-
-  $(".btn-next-multy").click(function () {
-    sliderText.trigger("next.owl.carousel");
-    $(".btn-prev-multy").addClass("active");
-  });
-  $(".btn-prev-multy").click(function () {
-    sliderText.trigger("prev.owl.carousel", [300]);
-  });
   //*****************************************************
   //Акардеон на главной
   const accardionList = document.querySelector(".tabs-list"),
