@@ -1442,7 +1442,7 @@ footer {
     }
   }
 }
-.factory-list .item:not(item-col--descr) {
+.factory-list .item.item--two_col {
   grid-template-columns: 1fr 1fr;
 }
 .default-list--icon .item--accardeon--active .text {
