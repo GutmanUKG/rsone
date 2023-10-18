@@ -484,7 +484,7 @@ header {
         &:hover {
           a {
             color: #f1b705;
-            transform: translateY(-100%);
+            transform: translateY(-120%);
           }
           &:after {
             transform: translateX(6px);
@@ -506,7 +506,7 @@ header {
             content: attr(text);
             position: absolute;
             left: 0;
-            top: 100%;
+            top: 120%;
           }
           &:hover {
             text-decoration: none;
@@ -1079,6 +1079,11 @@ footer {
     font-weight: 350;
     line-height: 24px;
     li {
+      font-family: Inter, sans-serif;
+      font-size: $size16;
+      font-style: normal;
+      font-weight: 350;
+      line-height: 24px;
       list-style: none;
       .breadcrumbs-item {
         color: #000;
@@ -1092,6 +1097,14 @@ footer {
         }
         &:hover {
         }
+      }
+      &.breadcrumbs-item--active {
+        color: rgba(0, 0, 0, 0.5);
+        font-family: Inter, sans-serif;
+        font-size: $size16;
+        font-style: normal;
+        font-weight: 350;
+        line-height: 24px;
       }
     }
   }

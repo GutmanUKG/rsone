@@ -680,7 +680,7 @@ header {
         }
 .categories .categories-elements .categories-menu li:hover a {
             color: #f1b705;
-            transform: translateY(-100%);
+            transform: translateY(-120%);
           }
 .categories .categories-elements .categories-menu li:hover:after {
             transform: translateX(6px);
@@ -702,7 +702,7 @@ header {
             content: attr(text);
             position: absolute;
             left: 0;
-            top: 100%;
+            top: 120%;
           }
 .categories .categories-elements .categories-menu li a:hover {
             -webkit-text-decoration: none;
@@ -1290,6 +1290,11 @@ footer {
     line-height: 24px;
   }
 .breadcrumbs .breadcrumbs-list li {
+      font-family: Inter, sans-serif;
+      font-size: calc(0.78125vw + 6px);
+      font-style: normal;
+      font-weight: 350;
+      line-height: 24px;
       list-style: none;
     }
 .breadcrumbs .breadcrumbs-list li .breadcrumbs-item {
@@ -1305,6 +1310,14 @@ footer {
         }
 .breadcrumbs .breadcrumbs-list li .breadcrumbs-item:hover {
         }
+.breadcrumbs .breadcrumbs-list li.breadcrumbs-item--active {
+        color: rgba(0, 0, 0, 0.5);
+        font-family: Inter, sans-serif;
+        font-size: calc(0.78125vw + 6px);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 24px;
+      }
 .title-inner--default {
   color: #000;
   font-family: Montserrat, sans-serif;
