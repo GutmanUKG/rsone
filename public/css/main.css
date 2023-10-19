@@ -245,6 +245,12 @@ figure {
 .btn-open:focus {
     outline: none;
   }
+.close {
+  background: url("../imgs/icons/plus.svg") center no-repeat;
+  width: 44px;
+  height: 44px;
+  opacity: 1;
+}
 header {
   padding-top: 36px;
   padding-bottom: 36px;
@@ -288,6 +294,7 @@ header {
   transition: 0.3s all;
   -webkit-text-decoration: none;
   text-decoration: none;
+  cursor: pointer;
 }
 .btn-default:focus {
     outline: none;
@@ -1814,10 +1821,10 @@ footer {
   margin-bottom: -170px;
   margin-top: 200px;
 }
-.form-footer .form-group {
+.form-footer .form-group, .form_main .form-group {
     position: relative;
   }
-.form-footer .form-group label {
+.form-footer .form-group label, .form_main .form-group label {
       color: #000;
       font-family: Inter, sans-serif;
       font-size: calc(0.78125vw + 6px);
@@ -1831,7 +1838,7 @@ footer {
       transform: translateY(-50%);
       transition: 0.3s all;
     }
-.form-footer .form-group input {
+.form-footer .form-group input, .form_main .form-group input {
       background: transparent;
       color: #000;
       font-family: Inter, sans-serif;
@@ -1846,7 +1853,7 @@ footer {
       width: 100%;
       height: 52px;
     }
-.form-footer .form-group.focused label {
+.form-footer .form-group.focused label, .form_main .form-group.focused label {
         top: 0%;
         color: rgba(0, 0, 0, 0.5);
         font-size: 12px;
@@ -1855,7 +1862,7 @@ footer {
         font-weight: 350;
         line-height: 16px; /* 133.333% */
       }
-.form-footer .form-description {
+.form-footer .form-description, .form_main .form-description {
     color: rgba(0, 0, 0, 0.5);
 
     display: block;
@@ -1866,7 +1873,7 @@ footer {
     font-weight: 400;
     line-height: 20px; /* 153.846% */
   }
-.form-footer textarea {
+.form-footer textarea, .form_main textarea {
     resize: none;
     width: 100%;
     height: 188px;
@@ -1883,12 +1890,14 @@ footer {
   }
 /* 150% */
 .form-footer textarea:focus,
-    .form-footer textarea:focus-visible {
+    .form-footer textarea:focus-visible,
+    .form_main textarea:focus,
+    .form_main textarea:focus-visible {
       border: 1px solid #000;
       border-radius: 0;
       outline: none;
     }
-.form-footer .form-footer {
+.form-footer .form-footer, .form_main .form-footer {
     color: rgba(0, 0, 0, 0.5);
     font-family: Inter, sans-serif;
     font-size: 12px;
@@ -1898,11 +1907,13 @@ footer {
     line-height: 20px;
   }
 /* 153.846% */
-.form-footer .form-footer input[type="file"] {
+.form-footer .form-footer input[type="file"], .form_main .form-footer input[type="file"] {
       display: none;
     }
 .form-footer .form-footer input[type="submit"],
-    .form-footer .form-footer .submit {
+    .form-footer .form-footer .submit,
+    .form_main .form-footer input[type="submit"],
+    .form_main .form-footer .submit {
       border-radius: 52px;
       background: #f1b705;
       border: none;
@@ -1921,19 +1932,19 @@ footer {
       overflow: hidden;
       cursor: pointer;
     }
-.form-footer .form-footer input[type="submit"] span, .form-footer .form-footer .submit span {
+.form-footer .form-footer input[type="submit"] span, .form-footer .form-footer .submit span, .form_main .form-footer input[type="submit"] span, .form_main .form-footer .submit span {
         padding: 14px 32px !important;
       }
-.form-footer .form-footer input[type="submit"] span, .form-footer .form-footer .submit span {
+.form-footer .form-footer input[type="submit"] span, .form-footer .form-footer .submit span, .form_main .form-footer input[type="submit"] span, .form_main .form-footer .submit span {
         padding: 0;
         display: block;
       }
-.form-footer .form-footer input[type="submit"] span::after, .form-footer .form-footer .submit span::after {
+.form-footer .form-footer input[type="submit"] span::after, .form-footer .form-footer .submit span::after, .form_main .form-footer input[type="submit"] span::after, .form_main .form-footer .submit span::after {
           right: 0;
           left: 0;
           text-align: center;
         }
-.form-footer .form-footer label[for="file"] {
+.form-footer .form-footer label[for="file"], .form_main .form-footer label[for="file"] {
       color: #000;
       font-family: Inter, sans-serif;
       font-size: calc(0.78125vw + 6px);
@@ -1944,6 +1955,136 @@ footer {
       margin-bottom: 40px;
       cursor: pointer;
     }
+#main_form {
+  background: #fff;
+  width: 66.66667%;
+  width: 66.66667%;
+  width: calc(var(--col-rs)*8);
+  position: fixed;
+  top: -500%;
+  left: 50%;
+  height: calc(29vh + 29vw);
+  height: calc(29vh + 29vw);
+  height: calc(var(--index)*29);
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  overflow: hidden;
+  transition: 0.3s all;
+  z-index: 500;
+}
+#main_form .btn-default {
+    width: 100%;
+    margin-top: 40px;
+    text-align: center;
+  }
+#main_form .btn-default span::after {
+      text-align: center;
+      left: 0;
+      right: 0;
+    }
+#main_form .close {
+    position: absolute;
+    z-index: 20;
+    top: 32px;
+    right: 32px;
+    transition: 0.3s all;
+    outline: none;
+  }
+#main_form .close:hover {
+      transform: rotate(45deg);
+    }
+#main_form .form-info {
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-size: 12px;
+    font-size: var(--size12);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 166.667%; /* 166.667% */
+    margin-top: 24px;
+  }
+#main_form .form-inputs {
+    padding: 0;
+    width: 50%;
+  }
+#main_form .form-media {
+    width: 50%;
+  }
+#main_form .form-media img {
+      width: 100%;
+    }
+#main_form .form-inputs {
+    padding: 80px;
+    box-sizing: border-box;
+  }
+#main_form .form-inputs .form-title {
+      color: #000;
+      text-align: center;
+      font-family: Montserrat, sans-serif;
+      font-size: 3.125vw;
+      font-size: var(--size40);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%; /* 48px */
+      letter-spacing: -0.8px;
+    }
+#main_form .form-inputs .form-descr {
+      color: rgba(0, 0, 0, 0.75);
+      text-align: center;
+      font-family: Inter, sans-serif;
+      font-size: var(--size14);
+      font-style: normal;
+      font-weight: 350;
+      line-height: 142.857%; /* 142.857% */
+      margin-top: 32px;
+      margin-bottom: 30px;
+    }
+#main_form .form-inputs .form-group {
+      position: relative;
+    }
+#main_form .form-inputs .form-group label {
+        position: absolute;
+        font-family: Inter, sans-serif;
+        font-size: calc(0.78125vw + 6px);
+        font-size: var(--size16);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 150%; /* 150% */
+      }
+#main_form .form-inputs .form-group input {
+        outline: none;
+        background: #fff;
+        color: #000;
+        font-family: Inter, sans-serif;
+        font-size: calc(0.78125vw + 6px);
+        font-size: var(--size16);
+        font-style: normal;
+        font-weight: 350;
+        line-height: 150%; /* 150% */
+      }
+#main_form .form-media img {
+      -o-object-fit: contain;
+         object-fit: contain;
+    }
+#main_form.active {
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  height: 100vw;
+}
+.overlay.active {
+  display: block;
+}
 @keyframes bounceInUp {from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}from {opacity: 0;transform: translate3d(0, 3000px, 0);}60% {opacity: 1;transform: translate3d(0, -20px, 0);}75% {transform: translate3d(0, 10px, 0);}90% {transform: translate3d(0, -5px, 0);}to {transform: translate3d(0, 0, 0);}}
 @keyframes bounceOutUp {20% {transform: translate3d(0, -10px, 0);}40%, 45% {opacity: 1;transform: translate3d(0, 20px, 0);}to {opacity: 0;transform: translate3d(0, -2000px, 0);}}
 @keyframes fadeOut {from {opacity: 1;}to {opacity: 0;}}
@@ -1967,11 +2108,7 @@ footer {
   .header-lang li {
     gap: 8px;
   }
-  .production
-    .production-elements
-    .production-row
-    .production-list
-    .production-item {
-    padding: 20px;
-  }
+          .production .production-elements .production-row .production-list .production-item {
+            padding: 20px;
+          }
 }

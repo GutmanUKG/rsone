@@ -3,7 +3,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Получение выделенного текста с помощью анонимной самовызывающейся функции.
   function get_text() {
-    // Объявление переменной.
     var text;
     if (window.getSelection) {
       // Современный способ.
