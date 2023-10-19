@@ -3,22 +3,22 @@
   --col-rs: calc((1 / 12) * 100%);
   --container-rs: calc(100% - var(--col-rs));
   --header-height: calc(var(--index) * 2);
+  --size16: calc((100vw - 1280px) / (2560 - 1280) * (26 - 16) + 16px);
+  --size20: calc((100vw - 1280px) / (2560 - 1280) * (30 - 20) + 20px);
+  --size24: calc((100vw - 1280px) / (2560 - 1280) * (48 - 24) + 24px);
+  --size225: calc((100vw - 375px) / (2560 - 375) * (225 - 48) + 48px);
+  --size42: calc((100vw - 375px) / (1320 - 375) * (42 - 35) + 35px);
+  --size60: calc((100vw - 1280px) / (2560 - 1280) * (120 - 60) + 60px);
+  --size40: calc((100vw - 1280px) / (2560 - 1280) * (80 - 40) + 40px);
+  --size120: calc((100vw - 390px) / (2560 - 390) * (120 - 60) + 60px);
+  --size12: calc((100vw - 390px) / (2560 - 390) * (12 - 12) + 12px);
+  --size18: calc((100vw - 390px) / (2560 - 390) * (22 - 18) + 18px);
 }
-$size16: calc((100vw - 1280px) / (2560 - 1280) * (26 - 16) + 16px);
-$size20: calc((100vw - 1280px) / (2560 - 1280) * (30 - 20) + 20px);
-$size24: calc((100vw - 1280px) / (2560 - 1280) * (48 - 24) + 24px);
-$size225: calc((100vw - 375px) / (2560 - 375) * (225 - 40) + 40px);
-$size42: calc((100vw - 375px) / (1320 - 375) * (42 - 35) + 35px);
-$size60: calc((100vw - 1280px) / (2560 - 1280) * (120 - 60) + 60px);
-$size40: calc((100vw - 1280px) / (2560 - 1280) * (80 - 40) + 40px);
-$size120: calc((100vw - 390px) / (2560 - 390) * (120 - 60) + 60px);
-$size12: calc((100vw - 390px) / (2560 - 390) * (12 - 12) + 12px);
-$size18: calc((100vw - 390px) / (2560 - 390) * (22 - 18) + 18px);
 body {
   overflow-x: hidden;
   color: #666;
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 350;
   line-height: 24px; /* 150% */
@@ -26,7 +26,7 @@ body {
 p {
   color: #666;
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 350;
   line-height: 24px; /* 150% */
@@ -91,8 +91,8 @@ header {
 }
 .section-title {
   color: #000;
-  font-family: Montserrat;
-  font-size: $size60;
+  font-family: Montserrat, sans-serif;
+  font-size: var(--size60);
   font-style: normal;
   font-weight: 600;
   line-height: 92%;
@@ -102,7 +102,7 @@ header {
 .btn-default {
   color: rgba(0, 0, 0, 0.75);
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 450;
   line-height: 150%;
@@ -122,7 +122,7 @@ header {
   span {
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 450;
     line-height: 150%;
@@ -152,7 +152,7 @@ header {
 .default-link {
   color: #000;
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
@@ -188,7 +188,7 @@ header {
   span {
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 450;
     display: block;
@@ -252,7 +252,7 @@ header {
     a {
       color: #000;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 450;
       line-height: 36px;
@@ -326,7 +326,7 @@ header {
     a {
       color: #000;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 450;
       line-height: 36px;
@@ -354,7 +354,7 @@ header {
     padding-top: calc(116px - 36px);
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 150%;
@@ -364,7 +364,7 @@ header {
   .main_banner-title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: $size225;
+    font-size: var(--size225);
     font-style: normal;
     font-weight: 600;
     line-height: 92%;
@@ -386,7 +386,7 @@ header {
       width: calc(((3 / 9) * 100%) + var(--index) / 1.6);
       color: rgba(0, 0, 0, 0.75);
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 150%;
@@ -420,7 +420,7 @@ header {
       width: calc(((3 / 12) * 100%) - var(--index) / 1.6);
       color: rgba(0, 0, 0, 0.75);
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 150%; /* 150% */
@@ -494,7 +494,7 @@ header {
         a {
           color: #000;
           font-family: Montserrat, sans-serif;
-          font-size: $size40;
+          font-size: var(--size40);
           font-style: normal;
           font-weight: 600;
           line-height: 52px;
@@ -520,7 +520,7 @@ header {
     leading-trim: both;
     text-edge: cap;
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 150%; /* 150% */
@@ -562,8 +562,8 @@ header {
         }
         .item-title {
           color: #000;
-          font-family: Montserrat;
-          font-size: $size24;
+          font-family: Montserrat, sans-serif;
+          font-size: var(--size24);
           font-style: normal;
           font-weight: 600;
           line-height: 120%; /* 28.8px */
@@ -572,8 +572,8 @@ header {
         }
         .item-count {
           color: rgba(0, 0, 0, 0.1);
-          font-family: Montserrat;
-          font-size: $size40;
+          font-family: Montserrat, sans-serif;
+          font-size: var(--size40);
           font-style: normal;
           font-weight: 400;
           line-height: 40px; /* 100% */
@@ -583,7 +583,7 @@ header {
         a {
           color: #000;
           font-family: Inter, sans-serif;
-          font-size: $size16;
+          font-size: var(--size16);
           font-style: normal;
           font-weight: 450;
           line-height: 20px; /* 125% */
@@ -662,7 +662,7 @@ header {
         width: calc((3 / 12) * 100%);
         color: rgba(0, 0, 0, 0.75);
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 24px; /* 150% */
@@ -687,7 +687,7 @@ header {
           background: rgba(0, 0, 0, 0.06);
           color: rgba(0, 0, 0, 0.5);
           font-family: Inter, sans-serif;
-          font-size: $size16;
+          font-size: var(--size16);
           font-style: normal;
           font-weight: 350;
           line-height: 24px; /* 150% */
@@ -704,8 +704,8 @@ header {
           h2 {
             margin-top: auto;
             color: #000;
-            font-family: Montserrat;
-            font-size: $size20;
+            font-family: Montserrat, sans-serif;
+            font-size: var(--size20);
             font-style: normal;
             font-weight: 600;
             line-height: 120%; /* 24px */
@@ -735,7 +735,7 @@ header {
     .steps-count_item {
       position: relative;
       color: #000;
-      font-family: Montserrat;
+      font-family: Montserrat, sans-serif;
       font-size: 80px;
       font-style: normal;
       font-weight: 400;
@@ -757,7 +757,7 @@ header {
       }
       sub {
         color: #000;
-        font-family: Montserrat;
+        font-family: Montserrat, sans-serif;
         font-size: 12px;
         font-style: normal;
         font-weight: 600;
@@ -777,15 +777,15 @@ header {
       .steps-text {
         color: rgba(0, 0, 0, 0.75);
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 24px;
         width: calc((3 / 12) * 100%);
         h3 {
           color: #000;
-          font-family: Montserrat;
-          font-size: $size20;
+          font-family: Montserrat, sans-serif;
+          font-size: var(--size20);
           font-style: normal;
           font-weight: 600;
           line-height: 120%;
@@ -895,8 +895,8 @@ header {
   .footer_inner_slider-item {
     h2 {
       color: #000;
-      font-family: Montserrat;
-      font-size: $size24;
+      font-family: Montserrat, sans-serif;
+      font-size: var(--size24);
       font-style: normal;
       font-weight: 600;
       line-height: 120%;
@@ -917,7 +917,7 @@ header {
     p {
       color: rgba(0, 0, 0, 0.75);
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 24px; /* 150% */
@@ -928,7 +928,7 @@ header {
   margin-top: 100px;
   color: rgba(0, 0, 0, 0.75);
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 350;
   line-height: 24px; /* 150% */
@@ -962,7 +962,7 @@ header {
 
         h3 {
           color: #000;
-          font-family: Montserrat;
+          font-family: Montserrat, sans-serif;
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -1074,13 +1074,13 @@ footer {
     gap: 12px;
     color: #000;
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 24px;
     li {
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 24px;
@@ -1088,7 +1088,7 @@ footer {
       .breadcrumbs-item {
         color: #000;
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 24px;
@@ -1101,7 +1101,7 @@ footer {
       &.breadcrumbs-item--active {
         color: rgba(0, 0, 0, 0.5);
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 24px;
@@ -1113,7 +1113,7 @@ footer {
 .title-inner--default {
   color: #000;
   font-family: Montserrat, sans-serif;
-  font-size: $size120;
+  font-size: var(--size120);
   font-style: normal;
   font-weight: 600;
   line-height: 92%; /* 110.4px */
@@ -1139,7 +1139,7 @@ footer {
     width: calc(var(--col-rs) * 3);
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 24px; /* 150% */
@@ -1148,7 +1148,7 @@ footer {
 .inner_title-section {
   color: rgba(0, 0, 0, 0.75);
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 350;
   line-height: 24px;
@@ -1178,7 +1178,7 @@ footer {
     .item-title {
       color: #000;
       font-family: Montserrat, sans-serif;
-      font-size: $size60;
+      font-size: var(--size60);
       font-style: normal;
       font-weight: 400;
       line-height: 64px; /* 106.667% */
@@ -1186,7 +1186,7 @@ footer {
       sup {
         position: absolute;
         top: 0;
-        font-size: $size12;
+        font-size: var(--size12);
         letter-spacing: 0.6px;
         text-transform: uppercase;
         padding-left: 8px;
@@ -1195,7 +1195,7 @@ footer {
     .item-text {
       color: rgba(0, 0, 0, 0.75);
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 24px;
@@ -1230,7 +1230,7 @@ footer {
   .info-box-title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: $size40;
+    font-size: var(--size40);
     font-style: normal;
     font-weight: 600;
     line-height: 52px; /* 130% */
@@ -1242,7 +1242,7 @@ footer {
     width: 50%;
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 24px; /* 150% */
@@ -1256,7 +1256,7 @@ footer {
   .inner_banner-text {
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 24px;
@@ -1275,7 +1275,7 @@ footer {
   .inner_banner-title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: $size24;
+    font-size: var(--size24);
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
@@ -1297,7 +1297,7 @@ footer {
           border-bottom: 1px solid;
           color: rgba(0, 0, 0, 0.75);
           font-family: Inter, sans-serif;
-          font-size: $size16;
+          font-size: var(--size16);
           font-style: normal;
           font-weight: 450;
           line-height: 20px; /* 125% */
@@ -1319,7 +1319,7 @@ footer {
 }
 
 .section-title--40 {
-  font-size: $size40;
+  font-size: var(--size40);
   padding-left: calc(var(--col-rs));
 }
 .section-title--center {
@@ -1339,7 +1339,7 @@ footer {
   .services-description--title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: $size40;
+    font-size: var(--size40);
     font-style: normal;
     font-weight: 600;
     line-height: 130%;
@@ -1349,7 +1349,7 @@ footer {
   .services-description--text * {
     color: rgba(0, 0, 0, 0.75);
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 150%;
@@ -1378,7 +1378,7 @@ footer {
     .title {
       color: #000;
       font-family: Montserrat, sans-serif;
-      font-size: $size18;
+      font-size: var(--size18);
       font-style: normal;
       font-weight: 600;
       line-height: 133.333%;
@@ -1390,7 +1390,7 @@ footer {
       color: rgba(0, 0, 0, 0.75);
       text-overflow: ellipsis;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 150%;
@@ -1430,7 +1430,7 @@ footer {
       &.item-col--name {
         color: #000;
         font-family: Montserrat, sans-serif;
-        font-size: $size18;
+        font-size: var(--size18);
         font-style: normal;
         font-weight: 600;
         line-height: 133.333%;
@@ -1439,7 +1439,7 @@ footer {
       &.item-col--descr {
         color: rgba(0, 0, 0, 0.5);
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 150%; /* 150% */
@@ -1447,7 +1447,7 @@ footer {
       &.item-col--adress {
         color: rgba(0, 0, 0, 0.5);
         font-family: Inter, sans-serif;
-        font-size: $size16;
+        font-size: var(--size16);
         font-style: normal;
         font-weight: 350;
         line-height: 150%;
@@ -1482,7 +1482,7 @@ footer {
   gap: 8px;
   color: #000;
   font-family: Inter, sans-serif;
-  font-size: $size16;
+  font-size: var(--size16);
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
@@ -1527,7 +1527,7 @@ footer {
     label {
       color: #000;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 24px; /* 150% */
@@ -1541,7 +1541,7 @@ footer {
       background: transparent;
       color: #000;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 350;
       line-height: 24px; /* 150% */
@@ -1555,7 +1555,7 @@ footer {
       label {
         top: 0%;
         color: rgba(0, 0, 0, 0.5);
-        font-size: $size12;
+        font-size: var(--size12);
         font-style: normal;
         font-weight: 350;
         line-height: 16px; /* 133.333% */
@@ -1567,7 +1567,7 @@ footer {
 
     display: block;
     font-family: Inter, sans-serif;
-    font-size: $size12;
+    font-size: var(--size12);
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 153.846% */
@@ -1581,7 +1581,7 @@ footer {
     border: 1px solid #000;
     color: #000;
     font-family: Inter, sans-serif;
-    font-size: $size16;
+    font-size: var(--size16);
     font-style: normal;
     font-weight: 350;
     line-height: 24px; /* 150% */
@@ -1596,7 +1596,7 @@ footer {
   .form-footer {
     color: rgba(0, 0, 0, 0.5);
     font-family: Inter, sans-serif;
-    font-size: $size12;
+    font-size: var(--size12);
     font-style: normal;
     font-weight: 400;
     line-height: 20px; /* 153.846% */
@@ -1614,7 +1614,7 @@ footer {
       box-sizing: border-box;
       color: rgba(0, 0, 0, 0.75);
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 450;
       line-height: 24px; /* 150% */
@@ -1635,12 +1635,45 @@ footer {
     label[for="file"] {
       color: #000;
       font-family: Inter, sans-serif;
-      font-size: $size16;
+      font-size: var(--size16);
       font-style: normal;
       font-weight: 400;
       line-height: 150%; /* 150% */
       margin-bottom: 40px;
       cursor: pointer;
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  header {
+    .col-3 {
+      width: 16.6%;
+      max-width: 16.6%;
+    }
+  }
+  .main_banner {
+    .main_banner-btns {
+      .main_banner-btns--wrapper {
+        flex-direction: column;
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .header-menu {
+    gap: calc(var(--index) * 1.5);
+  }
+  .header-lang li {
+    gap: 8px;
+  }
+  .production
+    .production-elements
+    .production-row
+    .production-list
+    .production-item {
+    padding: 20px;
   }
 }
