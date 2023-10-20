@@ -9,9 +9,10 @@
   --size225: calc((100vw - 375px) / (2560 - 375) * (225 - 48) + 48px);
   --size42: calc((100vw - 375px) / (1320 - 375) * (42 - 35) + 35px);
   --size60: calc((100vw - 1280px) / (2560 - 1280) * (120 - 60) + 60px);
-  --size40: calc((100vw - 1280px) / (2560 - 1280) * (80 - 40) + 40px);
+  --size40: calc((100vw - 1280px) / (2560 - 1280) * (60 - 40) + 40px);
   --size120: calc((100vw - 390px) / (2560 - 390) * (120 - 60) + 60px);
   --size12: calc((100vw - 390px) / (2560 - 390) * (12 - 12) + 12px);
+  --size14: calc((100vw - 390px) / (2560 - 390) * (16- 14) + 14px);
   --size18: calc((100vw - 390px) / (2560 - 390) * (22 - 18) + 18px);
 }
 body {
@@ -1691,11 +1692,11 @@ footer {
 }
 #main_form {
   background: #fff;
-  width: calc(var(--col-rs) * 8);
+  width: calc(var(--col-rs) * 6);
   position: fixed;
   top: -500%;
   left: 50%;
-  height: calc(var(--index) * 29);
+  height: calc(var(--index) * 24.5);
   transform: translate(-50%, -50%);
   border-radius: 2px;
   overflow: hidden;

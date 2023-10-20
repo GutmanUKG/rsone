@@ -171,9 +171,10 @@
   --size225: calc(8.10069vw + 17.62243px);
   --size42: calc(0.74074vw + 32.22222px);
   --size60: 4.6875vw;
-  --size40: 3.125vw;
+  --size40: calc(1.5625vw + 20px);
   --size120: calc(2.76498vw + 49.21659px);
   --size12: 12px;
+  --size14: calc(0.09217vw + 13.64055px);
   --size18: calc(0.18433vw + 17.28111px);
 }
 body {
@@ -719,7 +720,7 @@ header {
 .categories .categories-elements .categories-menu li a {
           color: #000;
           font-family: Montserrat, sans-serif;
-          font-size: 3.125vw;
+          font-size: calc(1.5625vw + 20px);
           font-size: var(--size40);
           font-style: normal;
           font-weight: 600;
@@ -806,7 +807,7 @@ header {
 .projects .projects-list .projects-item .item-col .item-count {
           color: rgba(0, 0, 0, 0.1);
           font-family: Montserrat, sans-serif;
-          font-size: 3.125vw;
+          font-size: calc(1.5625vw + 20px);
           font-size: var(--size40);
           font-style: normal;
           font-weight: 400;
@@ -1505,7 +1506,7 @@ footer {
 .info-box .info-box-title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: 3.125vw;
+    font-size: calc(1.5625vw + 20px);
     font-size: var(--size40);
     font-style: normal;
     font-weight: 600;
@@ -1604,7 +1605,7 @@ footer {
   font-size: calc(4.14747vw + 73.82488px);
 }
 .section-title--40 {
-  font-size: 3.125vw;
+  font-size: calc(1.5625vw + 20px);
   font-size: var(--size40);
   padding-left: 8.33333%;
   padding-left: 8.33333%;
@@ -1627,7 +1628,7 @@ footer {
 .services-description .services-description--title {
     color: #000;
     font-family: Montserrat, sans-serif;
-    font-size: 3.125vw;
+    font-size: calc(1.5625vw + 20px);
     font-size: var(--size40);
     font-style: normal;
     font-weight: 600;
@@ -1957,15 +1958,15 @@ footer {
     }
 #main_form {
   background: #fff;
-  width: 66.66667%;
-  width: 66.66667%;
-  width: calc(var(--col-rs)*8);
+  width: 50%;
+  width: 50%;
+  width: calc(var(--col-rs)*6);
   position: fixed;
   top: -500%;
   left: 50%;
-  height: calc(29vh + 29vw);
-  height: calc(29vh + 29vw);
-  height: calc(var(--index)*29);
+  height: calc(24.5vh + 24.5vw);
+  height: calc(24.5vh + 24.5vw);
+  height: calc(var(--index)*24.5);
   transform: translate(-50%, -50%);
   border-radius: 2px;
   overflow: hidden;
@@ -2022,7 +2023,7 @@ footer {
       color: #000;
       text-align: center;
       font-family: Montserrat, sans-serif;
-      font-size: 3.125vw;
+      font-size: calc(1.5625vw + 20px);
       font-size: var(--size40);
       font-style: normal;
       font-weight: 600;
@@ -2033,6 +2034,7 @@ footer {
       color: rgba(0, 0, 0, 0.75);
       text-align: center;
       font-family: Inter, sans-serif;
+      font-size: calc(0.09217vw + 13.64055px);
       font-size: var(--size14);
       font-style: normal;
       font-weight: 350;
