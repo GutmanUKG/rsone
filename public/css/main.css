@@ -176,6 +176,7 @@
   --size12: 12px;
   --size14: calc(0.09217vw + 13.64055px);
   --size18: calc(0.18433vw + 17.28111px);
+  --size36: calc(0.553vw + 21.84332px);
 }
 body {
   overflow-x: hidden;
@@ -2087,6 +2088,65 @@ footer {
 .overlay.active {
   display: block;
 }
+.burger_menu {
+  width: 50%;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 500;
+  background: #fff;
+  padding: 60px 18px;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.burger_menu .burger_menu-lang {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    gap: calc(1vh + 1vw);
+    gap: calc(1vh + 1vw);
+    gap: calc(var(--index)*1);
+  }
+.burger_menu .burger_menu-lang a {
+      color: #000;
+      font-family: Inter, sans-serif;
+      font-size: calc(0.18433vw + 17.28111px);
+      font-size: var(--size18);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 48px; /* 266.667% */
+    }
+.burger_menu .burger_menu-nav {
+    margin-top: 100%;
+    transform: translateY(-50%);
+  }
+.burger_menu .burger_menu-nav ul {
+      padding: 0;
+      margin: 0;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      flex-direction: column;
+      gap: calc(1.5vh + 1.5vw);
+      gap: calc(1.5vh + 1.5vw);
+      gap: calc(var(--index)*1.5);
+    }
+.burger_menu .burger_menu-nav ul li {
+        list-style: none;
+      }
+.burger_menu .burger_menu-nav ul li a {
+          color: #000;
+          font-family: Inter, sans-serif;
+          font-size: calc(0.553vw + 21.84332px);
+          font-size: var(--size36);
+          font-style: normal;
+          font-weight: 600;
+          line-height: 60px; /* 166.667% */
+        }
 @keyframes bounceInUp {from, 60%, 75%, 90%, to {animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);}from {opacity: 0;transform: translate3d(0, 3000px, 0);}60% {opacity: 1;transform: translate3d(0, -20px, 0);}75% {transform: translate3d(0, 10px, 0);}90% {transform: translate3d(0, -5px, 0);}to {transform: translate3d(0, 0, 0);}}
 @keyframes bounceOutUp {20% {transform: translate3d(0, -10px, 0);}40%, 45% {opacity: 1;transform: translate3d(0, 20px, 0);}to {opacity: 0;transform: translate3d(0, -2000px, 0);}}
 @keyframes fadeOut {from {opacity: 1;}to {opacity: 0;}}
