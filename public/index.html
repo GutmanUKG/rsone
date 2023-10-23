@@ -27,6 +27,7 @@
     <script src="js/sliderBanner.js"></script>
     <script src="js/form-footer.js"></script>
     <script src="js/toggleClass.js"></script>
+    <script src="js/burger_menu.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +38,7 @@
 
 <body>
     <header>
-        <div class="container-rs">
+        <div class="container-rs position-relative">
             <div class="row d-flex align-items-center">
                 <div class="col-3">
                     <a href="/rs/public" class="header-logo">
@@ -77,6 +78,9 @@
                         </a>
                     </li>
                 </ul>
+                <button class="burger_menu--open">
+
+                </button>
             </div>
         </div>
     </header>
@@ -876,13 +880,16 @@
     </div>
     <div class="overlay"></div>
     <div class="burger_menu">
+        <div class="close">
+
+        </div>
         <div class="burger_menu-lang">
-            <a href="/">Рус</a>
+            <a href="/" class="active">Рус</a>
             <a href="/kz/">Каз</a>
         </div>
         <nav class="burger_menu-nav">
             <ul>
-                <li><a href="#">Главная</a></li>
+                <li><a href="#" class="active">Главная</a></li>
                 <li><a href="#">О компании</a></li>
                 <li><a href="#">Услуги</a></li>
                 <li><a href="#">Производство</a></li>
