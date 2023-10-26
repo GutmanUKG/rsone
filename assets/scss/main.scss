@@ -1716,6 +1716,8 @@ footer {
     right: 32px;
     transition: 0.3s all;
     outline: none;
+    transform: rotate(-45deg);
+
     &:hover {
       transform: rotate(45deg);
     }
