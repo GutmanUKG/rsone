@@ -1524,6 +1524,9 @@ footer {
   padding: 100px 0px 170px 0px;
   margin-bottom: -170px;
   margin-top: 200px;
+  h2 {
+    margin: 0;
+  }
 }
 
 .form-footer,
@@ -1967,4 +1970,29 @@ footer {
 }
 #popup_success.active {
   right: 0;
+}
+
+.icons-list {
+  display: grid;
+
+  flex-wrap: wrap;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    embed {
+      width: 40px;
+    }
+  }
+  .item,
+  p {
+    color: rgba(0, 0, 0, 0.75);
+    font-family: Inter, sans-serif;
+    font-size: var(--size16);
+    font-style: normal;
+    font-weight: 350;
+    line-height: 24px; /* 150% */
+  }
 }
