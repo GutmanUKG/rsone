@@ -183,9 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       counterImg(list) {
         return list.length > 1 ? true : false;
       },
-      initialSlider(item) {
-        console.log(item);
-      },
+      initialSlider(item) {},
     },
   });
 });

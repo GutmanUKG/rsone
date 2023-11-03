@@ -106,9 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
       counterImg: function counterImg(list) {
         return list.length > 1 ? true : false;
       },
-      initialSlider: function initialSlider(item) {
-        console.log(item);
-      }
+      initialSlider: function initialSlider(item) {}
     }
   });
 });
