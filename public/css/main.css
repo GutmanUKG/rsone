@@ -2642,7 +2642,7 @@ footer {
       margin-top: 10px !important;
     }
   h1.title-inner--default {
-    margin-bottom: 60px;
+    margin-bottom: 140px;
   }
   .about_info-list {
     margin-top: 100px;
@@ -2688,6 +2688,46 @@ footer {
           .production .production-elements .production-row .production-list .production-item {
             padding: 20px;
           }
+  .col-5:has(.form-description) {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+    .col-5:has(.form-description) .form-description {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+    .col-5:has(.form-description) button {
+      display: block;
+      width: 100%;
+    }
+  .form-footer textarea,
+  .form_main textarea {
+    background: transparent;
+  }
+}
+@media (max-width: 1023px) {
+  .contacnt-row {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+    .contacnt-row .contanct-info {
+      order: 1;
+
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+        .contacnt-row .contanct-info .item .item-text {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+          .contacnt-row .contanct-info .item .item-text .item-socials {
+            margin-left: 0;
+          }
+  .default-list--icon .item .text {
+    height: 100px;
+  }
 }
 @media (max-width: 768px) {
   .burger_menu--open {
@@ -3178,4 +3218,113 @@ footer {
         gap: 40px;
         padding: 0;
       }
+  .icons-list {
+    grid-template-columns: 1fr;
+  }
+    .form-footer-big .row {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+      .form-footer-big .row .col-5 {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+      }
+      .form-footer-big .row .offset-1 {
+        margin-left: 0;
+      }
+    .form-footer-big .form-description:first-child {
+      display: none;
+    }
+    .grey-section .row.align-items-end {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 60px;
+      gap: 60px;
+    }
+      .grey-section .row.align-items-end .section-title,
+      .grey-section .row.align-items-end .col-6 {
+        width: 100%;
+        max-width: 100%;
+      }
+  .info-box .info-box-text {
+    width: 100%;
+  }
+    .inner_banner--relative:has(.col-8.inner_banner-image) {
+      height: auto;
+      margin-top: -60px;
+    }
+      .inner_banner--relative:has(.col-8.inner_banner-image) .row {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+        gap: 40px;
+      }
+
+      .inner_banner--relative:has(.col-8.inner_banner-image) .inner_banner-text {
+        order: 1;
+        max-width: 100%;
+      }
+      .inner_banner--relative:has(.col-8.inner_banner-image) .inner_banner-image {
+        width: 100%;
+        max-width: 100%;
+      }
+  .default-list--icon {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+    .factory .row:has(.section-title.col-6) {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+      .factory .row:has(.section-title.col-6) div,
+      .factory .row:has(.section-title.col-6) h2,
+      .factory .row:has(.section-title.col-6) p {
+        width: 100%;
+        max-width: 100%;
+      }
+  .factory-list .item {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+      .factory-list .item .item-col:first-child {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      .factory-list .item .item-col:nth-child(2) {
+        grid-area: 2 / 1 / 3 / 2;
+      }
+      .factory-list .item .item-col:last-child {
+        grid-area: 2 / 2 / 3 / 3;
+      }
+  .section-title.section-title--center {
+    text-align: left;
+  }
+  .section-title--center {
+    margin-top: 100px;
+  }
+
+  .contanct-info {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .contanct-info {
+    grid-template-rows: repeat(3, 1fr);
+  }
+      .contanct-info .item:first-child {
+        grid-area: 1 / 1 / 2 / 3;
+      }
+      .contanct-info .item:nth-child(2) {
+        grid-area: 2 / 1 / 3 / 3;
+      }
+      .contanct-info .item:nth-child(3) {
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      .contanct-info .item:last-child {
+        grid-area: 3 / 2 / 4 / 3;
+      }
+  h1.title-inner--default {
+    margin-bottom: 40px;
+  }
 }
