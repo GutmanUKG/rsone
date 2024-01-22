@@ -2,6 +2,10 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
+  let r = document.querySelector(":root");
+  const scale = window.devicePixelRatio;
+  r.style.setProperty("--scaleX", scale + "vw");
+  r.style.setProperty("--scaleY", scale + "vh");
   //Все для появления всплывашок на проектах
   try {
     const mainProjectsWrapper = document.querySelector(".projects"),
